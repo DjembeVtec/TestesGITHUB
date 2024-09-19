@@ -13,8 +13,9 @@ jobs:
    name: O meu
    uses: actions/checkout@v4.1.7
    steps:
-     - run: echo "🎉 The job was triggered by event: ${{ github.event_name }}"
+     - run: |
+          echo "🎉 The job was triggered by event: ${{ github.event_name }}"
           echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
-    
-       run: echo "The repository ${{ github.repository }} contains the following files:"
+       run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
           tree          
